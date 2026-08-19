@@ -26,7 +26,7 @@ public class ApiModelo {
             //creacion de la peticion del cliente
             HttpRequest peticion = HttpRequest.newBuilder()
                     .uri(URI.create(this.api_url))
-                    .header("Accept","text/plain").GET().build();
+                    .header("Accept","text/aplication").GET().build();
             this.respuesta_api = cliente.send(peticion, HttpResponse
                     .BodyHandlers.ofString());   
         } catch (IOException ex) {
