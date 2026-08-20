@@ -1,0 +1,286 @@
+/* ═══════════════════════════════════════════════
+   posts.css — Estilos de la tabla de posts
+   Enlazado desde: web/posts.jsp
+   ═══════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #334155;
+    min-height: 100vh;
+}
+
+/* ── Top Bar ── */
+.top-bar-posts {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 0 1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    background: #003399;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.btn-back:hover {
+    background: #002266;
+}
+
+/* ── Cabecera ── */
+.page-header {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge-co {
+    background: #dc2626;
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+}
+
+.title-row h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #003399;
+}
+
+.subtitle-data {
+    color: #64748b;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.header-right {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stat-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 160px;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.text-blue { color: #003399; }
+.text-red { color: #dc2626; }
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+
+/* ── Barra de búsqueda ── */
+.search-bar-wrap {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 2rem;
+    color: #94a3b8;
+}
+
+#buscador {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1rem 1rem 1rem 3rem;
+    color: #334155;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#buscador::placeholder { color: #94a3b8; }
+#buscador:focus { border-color: #003399; }
+
+/* ── Contenedor Grid ── */
+.president-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    padding: 0 1rem;
+}
+
+/* ── Tarjetas ── */
+.president-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #eab308;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.president-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.president-id {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.id-number {
+    color: #dc2626;
+}
+
+.president-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #003399;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.president-period {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
+
+.president-party {
+    margin-bottom: 0.5rem;
+}
+
+.party-badge {
+    display: inline-block;
+    background: #003399;
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.president-description {
+    margin-top: 1rem;
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ── Sin resultados ── */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #64748b;
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+}
+
+/* ── Error ── */
+.error-box {
+    max-width: 600px;
+    margin: 3rem auto;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+.error-box h2 { color: #dc2626; margin-bottom: 0.5rem; }
+.error-box p  { color: #7f1d1d; font-size: 0.9rem; }
+
+/* ── Footer ── */
+.page-footer {
+    border-top: 1px solid #e2e8f0;
+    background: #ffffff;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #64748b;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-left strong {
+    color: #003399;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.footer-right {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-right a {
+    color: #475569;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-right a:hover {
+    color: #003399;
+}
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>Praticando API con Servlets</display-name>
+
+    <!-- 
+        =====================================================
+         ¿Para qué sirve este archivo?
+         web.xml es el "Deployment Descriptor" de la app web.
+         Le dice al servidor (Tomcat/GlassFish) cómo configurar
+         la aplicación: qué página mostrar por defecto,
+         qué servlets existen y a qué URLs responden.
+        =====================================================
+    -->
+
+    <!-- Página de inicio cuando se abre la app -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--
+        Registro del Servlet (alternativa a la anotación @WebServlet).
+        En este proyecto usamos @WebServlet en la clase, así que
+        este bloque es opcional/informativo, pero es buena práctica
+        tenerlo para entender el mapeo URL → Servlet.
+    -->
+    <!--
+    <servlet>
+        <servlet-name>PostsServlet</servlet-name>
+        <servlet-class>servlet.PostsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PostsServlet</servlet-name>
+        <url-pattern>/posts</url-pattern>
+    </servlet-mapping>
+    -->
+
+</web-app>
