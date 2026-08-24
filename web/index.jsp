@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API REST con Java Servlets</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- CSS externo separado del HTML → web/Css/index_jsp.css -->
-    <link rel="stylesheet" href="Css/index_jsp.css">
+    <link rel="stylesheet" href="Css/index_jsp.css?v=2">
 </head>
 <body>
 
@@ -33,19 +34,23 @@
         <a href="posts" id="btn-ver-posts" class="btn-primary">📋 Ver Presidentes</a>
 
         <div class="info-box">
-            <h3>Flujo de la petición</h3>
-            <div class="flow">
-                <span class="flow-item">Navegador</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">PostsServlet.java</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">ApiModelo.java</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">API Colombia</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">posts.jsp</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">HTML Tabla</span>
+            <h3>FLUJO DE LA PETICIÓN</h3>
+            <div class="flow-container">
+                <div class="flow-row">
+                    <span class="flow-item">Navegador</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="flow-item">PostsServlet.java</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="flow-item">ApiModelo.java</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="flow-item">API Colombia</span>
+                </div>
+                <div class="flow-row flow-row-2">
+                    <span class="flow-arrow-down">↘</span>
+                    <span class="flow-item">posts.jsp</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="flow-item">HTML Tabla</span>
+                </div>
             </div>
         </div>
     </div>

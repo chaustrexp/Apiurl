@@ -28,7 +28,6 @@
         este bloque es opcional/informativo, pero es buena práctica
         tenerlo para entender el mapeo URL → Servlet.
     -->
-    <!--
     <servlet>
         <servlet-name>PostsServlet</servlet-name>
         <servlet-class>servlet.PostsServlet</servlet-class>
@@ -38,6 +37,5 @@
         <servlet-name>PostsServlet</servlet-name>
         <url-pattern>/posts</url-pattern>
     </servlet-mapping>
-    -->
 
 </web-app>

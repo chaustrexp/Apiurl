@@ -54,6 +54,8 @@ public class PostsServlet extends HttpServlet {
                     
                     String inicio = obj.has("startPeriodDate") && !obj.isNull("startPeriodDate") ? obj.getString("startPeriodDate") : "?";
                     String fin = obj.has("endPeriodDate") && !obj.isNull("endPeriodDate") ? obj.getString("endPeriodDate") : "?";
+                    if (inicio.contains("T")) inicio = inicio.split("T")[0];
+                    if (fin.contains("T")) fin = fin.split("T")[0];
                     presidente.put("periodo", inicio + " a " + fin);
                     presidente.put("inicioRaw", inicio.equals("?") ? "9999-99-99" : inicio); // Para ordenamiento
 

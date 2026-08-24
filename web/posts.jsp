@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- CSS externo separado del HTML → web/Css/posts_jsp.css -->
-    <link rel="stylesheet" href="Css/posts_jsp.css">
+    <link rel="stylesheet" href="Css/posts_jsp.css?v=2">
 </head>
 <body>
 
@@ -42,7 +42,7 @@
             <h1>Presidentes de Colombia</h1>
         </div>
         <p class="subtitle-data">
-            <span class="icon-db">🗄️</span> Datos obtenidos de <strong>https://api-colombia.com/api/v1/President</strong> · HTTP <%= statusCode %>
+            <span class="icon-db">❖</span> Datos obtenidos de <strong>https://api-colombia.com/api/v1/President</strong> · HTTP <%= statusCode %>
         </p>
     </div>
     <div class="header-right">
@@ -93,22 +93,6 @@
     </div>
     <% } %>
 
-</div>
-
-<%-- ═══ Footer ═══ --%>
-<div class="page-footer">
-    <div class="footer-left">
-        <strong>API_PROJECT</strong>
-    </div>
-    <div class="footer-center">
-        © 2024 Java EE Colombian API Project - Built with Jakarta Servlet & MVC
-    </div>
-    <div class="footer-right">
-        <a href="#">Source Code</a>
-        <a href="#">API Provider</a>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
-    </div>
 </div>
 
 <% } // fin del else (sin error) %>

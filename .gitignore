@@ -1,0 +1,6 @@
+target/
+maven/
+maven.zip
+*.class
+.DS_Store
+nbproject/private/
